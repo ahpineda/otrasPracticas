@@ -8,16 +8,23 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity implements OnClickListener {
-    Button button1, button2, button3, button4;
+    private Button button1, button2, button3, button4;
+    private ButtonListener buttonListener = new ButtonListener();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button1=(Button) findViewById(R.id.b1);
-        button2=(Button) findViewById(R.id.b2);
-        button3=(Button) findViewById(R.id.b3);
-        button4=(Button) findViewById(R.id.b4);
+        button1= findViewById(R.id.b1);
+        button2= findViewById(R.id.b2);
+        button3= findViewById(R.id.b3);
+        button4= findViewById(R.id.b4);
+        buttonListener.setActivity(this);
+        button1.setOnClickListener(buttonListener);
+        button2.setOnClickListener(buttonListener);
+        button3.setOnClickListener(buttonListener);
+        button4.setOnClickListener(buttonListener);
     }
 
 

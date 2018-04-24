@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/b4"
         android:text="boton4"
-        android:layout_below="@+id/b3"/>
+        android:layout_below="@+id/b3" />
 
 
 
